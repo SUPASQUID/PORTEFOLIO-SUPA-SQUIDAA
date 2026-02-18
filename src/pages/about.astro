@@ -1,0 +1,164 @@
+---
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="A propos de | Bejaoui Haitem" description="A propos de Bejaoui Haitem">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="À propos de moi"
+				tagline="Merci de votre lecture. Vous trouverez ci‑dessous davantage d’informations sur mon parcours et mon profil."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/refroidissement-salle-serveur.png"
+					alt="Haitem qui travail"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Animé par une curiosité constante, je me suis naturellement tourné vers l’informatique, un domaine en évolution permanente où l’apprentissage ne s’arrête jamais. L’essor du numérique a profondément transformé notre société, et c’est précisément cette dynamique qui me motive : la possibilité d’explorer, de comprendre et de maîtriser des technologies qui façonnent le monde moderne. Internet offre un accès illimité au savoir, et j’aime tirer parti de cette richesse pour développer mes compétences et élargir ma vision technique.
+					</p>
+					<p>
+						Au fil de mon parcours, j’ai cultivé une manière de travailler calme, méthodique et orientée optimisation. J’aime comprendre en profondeur ce que je fais, améliorer ce qui peut l’être et avancer de manière autonome lorsque c’est nécessaire. Cette approche me permet d’aborder chaque projet avec rigueur et efficacité, tout en restant ouvert à la découverte de nouvelles méthodes et technologies. Ma curiosité est un moteur essentiel : elle me pousse à progresser et à rester à jour dans un secteur qui évolue rapidement.
+					</p>
+					<p>
+						J’ai également acquis une première expérience pratique en freelance, notamment dans le montage de PC et le dépannage informatique. À cela s’ajoute un service civique réalisé chez L’Alternativ, où j’ai assuré des missions de médiation numérique auprès de personnes âgées. Cette expérience m’a permis de transmettre mes connaissances, de rendre le numérique plus accessible et de développer une vraie sensibilité à l’accompagnement humain. À moyen terme, je souhaite poursuivre mes études, soit en intégrant l’école 42, soit en entrant en alternance dans un master ou une école d’ingénieur, afin de renforcer mes compétences en systèmes, réseaux et cybersécurité.
+					</p>
+				</div>
+			</section>
+		
+
+		<section>
+    <h2 class="section-title">Hard Skills</h2>
+    <div class="content">
+        <p>- <strong>Administration systèmes & réseaux</strong> : Bases du dépannage et configuration de petits réseaux locaux.</p>
+        <p>- <strong>Gestion d’infrastructures et services IT</strong> : Installation et mise à jour de logiciels et de matériel informatique.</p>
+        <p>- <strong>Maintenance matérielle</strong> : Montage de PC, diagnostic de pannes et remplacement de composants.</p>
+        <p>- <strong>Support utilisateur</strong> : Aide et assistance technique.</p>
+        <p>- <strong>Bases de la virtualisation</strong> : Utilisation de machines virtuelles pour tester des systèmes (VirtualBox, VMware).</p>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Soft Skills</h2>
+    <div class="content">
+        <p>- <strong>Capacité d'adaptation</strong> : Essentielle pour suivre l'évolution rapide des technologies et des menaces en cybersecurité(OWASP).</p>
+        <p>- <strong>Pédagogie & Communication</strong> : Savoir vulgariser des concepts techniques (expériences en médiation numérique).</p>
+        <p>- <strong>Gestion des priorités & Planification</strong> : Capacité à estimer la charge de travail, hiérarchiser les urgences et établir des plans d'action structurés pour garantir la continuité de service.</p>
+        <p>- <strong>Esprit d'analyse et de diagnostic</strong> : Approche méthodique pour identifier la source d'un problème (Troubleshooting).</p>
+        <p>- <strong>Autonomie & Curiosité</strong> : Capacité à s'auto-former et à chercher des solutions par soi-même.</p>
+        <p>- <strong>Sens des responsabilités</strong> : Respect de la confidentialité des données et des règles de sécurité.</p>
+    </div>
+</section>
+
+
+	<div style="
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    grid-column: 1 / -1; 
+    margin-top: 50px; 
+    margin-bottom: 50px;
+    width: 100%;
+">
+    <a href="/Documents/cv_HAITEM_BEJAOUI.pdf" target="_blank" style="
+        padding: 14px 32px;
+        background: linear-gradient(90deg, #b35686 0%, #5d0f8f 100%);
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        border-radius: 50px;
+        font-family: sans-serif;
+        font-weight: bold;
+        box-shadow: 0px 4px 15px rgba(252, 252, 252, 0.4);
+        transition: transform 0.2s;
+    ">
+        Consulter mon CV (PDF)
+    </a>
+</div>
+
+
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+
+
+
+
+/* Cible tous les paragraphes dans la section Background */
+.content p {
+    margin-bottom: 1.5rem; /* Crée l'espace entre les paragraphes */
+    line-height: 1.6;      /* Augmente l'interligne pour plus de clarté */
+}
+
+/* Supprime l'espace après le dernier paragraphe pour éviter un trou inutile */
+.content p:last-child {
+    margin-bottom: 0;
+}
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
