@@ -1,0 +1,41 @@
+---
+const { title, description, badge, fileUrl, format, size } = Astro.props;
+---
+
+<div style="height: 100%;">
+  <a href={fileUrl} target="_blank" style="
+    display: flex;
+    flex-direction: column;
+    background-color: #0d0e12; 
+    border: 1px solid #1f2028;
+    border-radius: 12px;
+    padding: 24px;
+    text-decoration: none;
+    height: 100%;
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  " onmouseover="this.style.borderColor='#8957e5'; this.style.transform='translateY(-4px)'" 
+     onmouseout="this.style.borderColor='#1f2028'; this.style.transform='translateY(0)'">
+    
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+      <div style="background: #1a1b23; padding: 8px; border-radius: 8px; border: 1px solid #2d2e38; display: flex;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ab7df8" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+      </div>
+      {badge && <span style="font-size: 10px; font-weight: 800; color: #00ffaa; background: rgba(0, 255, 170, 0.1); border: 1px solid rgba(0, 255, 170, 0.2); padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">{badge}</span>}
+    </div>
+
+    <div style="flex-grow: 1;">
+      <h3 style="color: #ffffff; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0; border: none;">{title}</h3>
+      <p style="color: #8b8b94; font-size: 0.85rem; line-height: 1.5; margin: 0;">{description}</p>
+    </div>
+
+    <div style="margin-top: 24px; display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px solid #1a1b23;">
+      <div style="font-size: 11px; font-weight: 700; color: #4a4a5a; text-transform: uppercase;">
+        {format} <span style="margin: 0 4px; color: #2d2e38;">|</span> {size}
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 900; color: #ffffff;">
+        TÉLÉCHARGER <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      </div>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import CardDoc from '../components/CardDoc.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+
+// Importation des outils système de fichiers (Node.js)
+import fs from 'node:fs';
+import path from 'node:path';
+
+// --- FONCTION DE CALCUL SÉCURISÉE ---
+function getFileSize(relativePropsPath) {
+  try {
+    // On construit le chemin absolu vers le dossier public
+    const absolutePath = path.join(process.cwd(), 'public', relativePropsPath);
+    
+    if (fs.existsSync(absolutePath)) {
+      const stats = fs.statSync(absolutePath);
+      const sizeInBytes = stats.size;
+      
+      if (sizeInBytes < 1024 * 1024) {
+        return Math.round(sizeInBytes / 1024) + " KB";
+      }
+      return (sizeInBytes / (1024 * 1024)).toFixed(1) + " MB";
+    }
+    return "Fichier introuvable";
+  } catch (error) {
+    return "Erreur taille";
+  }
+}
+---
+
+<BaseLayout title="Docmuents | Bejaoui Haitem">
+  <div class="stack gap-20">
+    <main class="wrapper">
+      <Hero
+        title="Documents"
+        tagline="Ici, retrouvez mon CV ainsi que d'autres documents scolaires et professionnels."
+        align="start"
+      />
+
+      <div style="
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+        gap: 24px !important;
+        margin: 50px 0 100px 0 !important;
+        width: 100% !important;
+      ">
+        <CardDoc 
+          title="Tableau de Synthèse E4" 
+          description="Récapitulatif des situations professionnelles et compétences réseau." 
+          badge="SISR"
+          fileUrl="/Documents/tableau-synthese-e4.pdf" 
+          format="PDF"
+          size={getFileSize("/Documents/tableau-synthese-e4.pdf")} 
+        />
+
+        <CardDoc 
+          title="Curriculum Vitae" 
+          description="Mon parcours académique et mes certifications à jour." 
+          badge="À JOUR"
+          fileUrl="/Documents/cv_HAITEM_BEJAOUI.pdf" 
+          format="PDF"
+          size={getFileSize("/Documents/cv_HAITEM_BEJAOUI.pdf")} 
+        />
+
+        <CardDoc 
+          title="Certification Google IT" 
+          description="Validation officielle des fondamentaux de l'assistance technique, de la gestion de parc informatique et de l'administration système." 
+          badge="VALIDE"
+          fileUrl="/Documents/Coursera_HB_Certfi_ITSP.pdf" 
+          format="PDF"
+          size={getFileSize("/Documents/Coursera_HB_Certfi_ITSP.pdf")} 
+        />
+
+        <CardDoc 
+          title="Attestations de Stage" 
+          description="Certificats officiels de fin de mission chez L'Alternativ." 
+          badge="OFFICIEL"
+          fileUrl="/Documents/stages.pdf" 
+          format="PDF"
+          size={getFileSize("/Documents/stages.pdf")} 
+        />
+
+      </div>
+    </main>
+  <ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+  .wrapper {
+    width: 100%;
+    max-width: 83rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+</style>
