@@ -1,7 +1,7 @@
 ---
 title: "L'Affaire XZ Utils : Anatomie de la Supply Chain Attack du Siècle"
 publishDate: 2024-03-29 00:00:00
-img: /assets/xz-utils.jpg
+img: /assets/xz-utils.png
 img_alt: Schéma conceptuel d'une attaque par empoisonnement de la chaîne d'approvisionnement (Supply Chain Attack)
 description: |
   Analyse technique et humaine de l'attaque ciblant l'utilitaire XZ Utils, une tentative d'infiltration étatique de trois ans qui a failli compromettre l'intégralité des serveurs SSH mondiaux.
