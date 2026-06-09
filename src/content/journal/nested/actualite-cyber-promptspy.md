@@ -1,7 +1,7 @@
 ---
 title: "Actualité Cyber - PromptSpy : L'IA au cœur de l'espionnage mobile"
 publishDate: 2026-03-01 00:00:00
-img: /assets/promptspy.jpg
+img: /assets/promptspy.png
 img_alt: Illustration de la menace PromptSpy et de l'exploitation de l'IA sur Android
 description: |
   Analyse de PromptSpy, le premier cas documenté d'un malware Android exploitant un grand modèle de langage (LLM) de manière dynamique pour automatiser l'espionnage et le contournement des défenses.

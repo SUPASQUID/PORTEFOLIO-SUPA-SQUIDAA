@@ -1,7 +1,7 @@
 ---
 title: "Projet Ouroboros : L'Émergence de l'IA Persistante et Autonome"
 publishDate: 2026-02-28 00:00:00
-img: /assets/ouroboros.jpg
+img: /assets/ouroboros.png
 img_alt: Réseau neuronal interconnecté représentant un cycle d'auto-évolution applicative
 description: |
   Analyse du projet Ouroboros, une rupture technologique illustrant le passage des modèles d'IA réactifs à des agents autonomes persistants capables de s'auto-coder et de s'étendre sans supervision humaine.

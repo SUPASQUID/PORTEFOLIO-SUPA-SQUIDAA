@@ -1,7 +1,7 @@
 ---
 title: "STORM-2755 : L'Ère de l'Infiltration par Evil Token"
 publishDate: 2026-03-15 00:00:00
-img: /assets/storm-2755.jpg
+img: /assets/storm-2755.png
 img_alt: Clé de sécurité physique FIDO2 protégeant contre le détournement de jetons de session
 description: |
   Étude de la campagne mondiale menée par le groupe d'attaque Storm-2755, exploitant l'ingénierie sociale assistée par IA et le détournement du protocole Device Code Flow pour contourner le MFA.
