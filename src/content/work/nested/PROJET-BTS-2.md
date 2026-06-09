@@ -35,17 +35,30 @@ Systèmes : Windows 11 OS principal, VirtualBox.
 
 Lien du projet 👇
 
-<div style="
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    grid-column: 1 / -1; 
-    margin-top: 50px; 
-    margin-bottom: 50px;
-    width: 100%;
+<div class="button-container">
+    <a href="/Documents/DOC-TECHNIQUE.pdf" target="_blank" class="btn-gradient">
+        Doc technique (PDF)
+    </a>
+    <a href="/Documents/FICHE-projet-vb-vlan-2pcv.pdf" target="_blank" class="btn-gradient">
+        Fiche Projet SIO 1 (PDF)
+    </a>
+</div>
 
-<div>
-    <a href="/Documents/DOC-TECHNIQUE.pdf"target="_blank" style="
+<style>
+    /* Le conteneur qui gère l'alignement et l'espacement */
+    .button-container {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 30px; /* L'espace entre les boutons */
+        grid-column: 1 / -1; 
+        margin-top: 50px; 
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    /* Le style appliqué aux deux boutons */
+    .btn-gradient {
         padding: 14px 32px;
         background: linear-gradient(90deg, #b35686 0%, #5d0f8f 100%);
         color: rgb(255, 255, 255);
@@ -54,8 +67,11 @@ Lien du projet 👇
         font-family: sans-serif;
         font-weight: bold;
         box-shadow: 0px 4px 15px rgba(252, 252, 252, 0.4);
-        transition: transform 0.2s;
-    ">
-        Fiche Projet SIO 1 (PDF)
-    </a>
-</div>
+        transition: transform 0.2s ease;
+    }
+
+    /* Petit bonus Astro : on peut facilement ajouter un effet au survol de la souris */
+    .btn-gradient:hover {
+        transform: translateY(-3px);
+    }
+</style>
